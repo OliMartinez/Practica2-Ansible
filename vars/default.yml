@@ -1,0 +1,5 @@
+app_user: "oliver"
+http_host: "omartinez.com"
+http_conf: "omartinez.com.conf"
+http_port: "80"
+disable_default: true

@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Create a new database
+      mysql_db: 
+        name: residencias 
+        state: present 
+        login_user: root 
+        login_password: "1234"
+    
+    - name: add sample data to database
+      copy: 
+        src: ProyectoWeb/Base de datos/residencias.sql 
+        dest: /tmp/residencias.sql
+        
+    - name: insert sample data into database
+      mysql_db: 
+        name: residencias 
+        state: import 
+        target: /tmp/residencias.sql 
+        login_user: root 
+        login_password: "1234"
+

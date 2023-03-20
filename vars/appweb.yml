@@ -1,0 +1,6 @@
+mysql_root_password: "1234"
+app_user: "oliver"
+http_host: "app.omartinez.com"
+http_conf: "app.omartinez.com.conf"
+http_port: "80"
+disable_default: true
